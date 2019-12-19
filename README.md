@@ -1,4 +1,4 @@
 # Socket-Poker
 Multiplayer card game
 
-__ powered by Java Sockets __
+<i> powered by Java Sockets</i>
