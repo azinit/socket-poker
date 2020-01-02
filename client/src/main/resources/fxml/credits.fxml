@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane fx:id="stackPaneLayout" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+           prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: black;" stylesheets="@../css/mainMenu.css"
+           xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="ru.itis.controllers.CreditsController">
+    <children>
+        <ImageView fitHeight="720.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../full_scenes/credits.jpg"/>
+            </image>
+        </ImageView>
+        <SplitPane dividerPositions="0.07981220657276995, 0.2699530516431925" prefHeight="720.0" prefWidth="1153.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="718.0" prefWidth="333.0">
+                    <children>
+                        <ImageView fitHeight="41.0" fitWidth="41.0" layoutX="26.0" layoutY="19.0"
+                                   onMouseClicked="#goToMainMenu" onMouseEntered="#squadMouseEntered"
+                                   onMouseExited="#squadMouseExited" onMousePressed="#squadMousePressed"
+                                   pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../buttons/btnReturn.png"/>
+                            </image>
+                        </ImageView>
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="718.0" prefWidth="340.0">
+                    <children>
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="718.0" prefWidth="333.0"/>
+            </items>
+        </SplitPane>
+    </children>
+</StackPane>

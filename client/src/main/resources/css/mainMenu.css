@@ -1,0 +1,23 @@
+.split-pane-divider {
+    -fx-background-color: transparent;
+}
+
+.split-pane {
+    -fx-background-color: transparent;
+}
+
+.button {
+    /*-fx-color: black;*/
+    -fx-background-color: transparent;
+    /*-fx-font-color: white;*/
+}
+
+.button:hover {
+    -fx-text-fill: white;
+    -fx-border-color: white;
+    -fx-border-radius: 2px;
+}
+
+.btnFire {
+
+}

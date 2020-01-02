@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane fx:id="stackPaneLayout" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+           prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: black;" stylesheets="@../css/mainMenu.css"
+           xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="ru.itis.controllers.SettingsController">
+    <children>
+        <ImageView fx:id="imgBack" fitHeight="720.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../components/settings_empty.jpg"/>
+            </image>
+        </ImageView>
+        <SplitPane dividerPositions="0.07981220657276995, 0.2699530516431925" prefHeight="720.0" prefWidth="1153.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="718.0" prefWidth="333.0"/>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="718.0" prefWidth="340.0">
+                    <children>
+                        <Button layoutY="191.0" minHeight="50.0" minWidth="230.0" mnemonicParsing="false"
+                                onAction="#switchOnGame" onMouseEntered="#standardMouseEntered"
+                                onMouseExited="#standardMouseExited" onMousePressed="#standardMousePressed" text="Game"
+                                textFill="#e5d1a9" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                            <font>
+                                <Font name="Corbel" size="22.0"/>
+                            </font>
+                        </Button>
+                        <Button layoutX="-3.0" layoutY="241.0" minHeight="50.0" minWidth="230.0" mnemonicParsing="false"
+                                onAction="#switchOnGraphics" onMouseEntered="#standardMouseEntered"
+                                onMouseExited="#standardMouseExited" onMousePressed="#standardMousePressed"
+                                text="Graphics" textFill="#e5d1a9" AnchorPane.leftAnchor="0.0"
+                                AnchorPane.rightAnchor="0.0">
+                            <font>
+                                <Font name="Corbel" size="22.0"/>
+                            </font>
+                        </Button>
+                        <Button layoutY="291.0" minHeight="50.0" minWidth="230.0" mnemonicParsing="false"
+                                onAction="#switchOnAudio" onMouseEntered="#standardMouseEntered"
+                                onMouseExited="#standardMouseExited" onMousePressed="#standardMousePressed" text="Audio"
+                                textFill="#e5d1a9" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                            <font>
+                                <Font name="Corbel" size="22.0"/>
+                            </font>
+                        </Button>
+                        <Button layoutX="-3.0" layoutY="341.0" minHeight="50.0" minWidth="230.0" mnemonicParsing="false"
+                                onAction="#switchOnLanguage" onMouseEntered="#standardMouseEntered"
+                                onMouseExited="#standardMouseExited" onMousePressed="#standardMousePressed"
+                                text="Language" textFill="#e5d1a9" AnchorPane.leftAnchor="0.0"
+                                AnchorPane.rightAnchor="0.0">
+                            <font>
+                                <Font name="Corbel" size="22.0"/>
+                            </font>
+                        </Button>
+                        <!--<Button layoutX="-3.0" layoutY="407.0" minHeight="50.0" minWidth="230.0" mnemonicParsing="false" onMouseEntered="#actionEntered" onMouseExited="#actionExited" onMousePressed="#actionPressed" opacity="0.0" text="Back" textFill="#e5d1a9" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                            <font>
+                                <Font name="Corbel" size="22.0" />
+                            </font>
+                        </Button>-->
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="718.0" prefWidth="333.0">
+                    <children>
+                        <ImageView fx:id="btn" fitHeight="41.0" fitWidth="41.0" layoutX="869.0" layoutY="18.0"
+                                   onMouseClicked="#goToMainMenu" onMouseEntered="#squadMouseEntered"
+                                   onMouseExited="#squadMouseExited" onMousePressed="#squadMousePressed"
+                                   pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../buttons/btnClose.png"/>
+                            </image>
+                        </ImageView>
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</StackPane>

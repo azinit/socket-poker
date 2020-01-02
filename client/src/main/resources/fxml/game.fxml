@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<StackPane fx:id="stackPaneLayout" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: black;" stylesheets="@../css/mainMenu.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.itis.controllers.GameController">
+    <children>
+        <ImageView fitHeight="720.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../game/bg_clean.jpg" />
+            </image>
+        </ImageView>
+        <SplitPane prefHeight="720.0" prefWidth="1153.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="718.0" prefWidth="340.0">
+                    <children>
+                        <ImageView fitHeight="41.0" fitWidth="41.0" layoutX="1214.0" layoutY="19.0" onMouseClicked="#goToMainMenu" onMouseEntered="#squadMouseEntered" onMouseExited="#squadMouseExited" onMousePressed="#squadMousePressed" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../buttons/btnContextMenu.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fx:id="btnMusic" fitHeight="41.0" fitWidth="41.0" layoutX="1167.0" layoutY="19.0" onMouseClicked="#switchMusicState" onMouseEntered="#squadMouseEntered" onMouseExited="#squadMouseExited" onMousePressed="#squadMousePressed" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../buttons/btnMusicOn.png" />
+                            </image>
+                        </ImageView>
+                        
+                        <ImageView fitHeight="41.0" fitWidth="124.0" layoutX="1114.0" layoutY="19.0" onMouseClicked="#takeCards" onMouseEntered="#squadMouseEntered" onMouseExited="#squadMouseExited" onMousePressed="#squadMousePressed" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../buttons/btnContextMenu.png" />
+                            </image>
+                        </ImageView>
+                        <Label fx:id="infoLabel" layoutX="24.0" layoutY="19.0" prefHeight="120.0" prefWidth="171.0" wrapText="true" />
+                  <Group layoutX="313.0" layoutY="17.0">
+                     <children>
+                              <ImageView fx:id="p2View" fitHeight="144.0" fitWidth="144.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="p2chipView" fitHeight="100.0" fitWidth="100.0" layoutX="32.0" layoutY="144.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="p2chipInfo" alignment="TOP_CENTER" contentDisplay="TOP" layoutX="10.0" layoutY="222.0" prefHeight="33.0" prefWidth="144.0" textFill="WHITE">
+                           <font>
+                              <Font name="Calibri" size="19.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="p2Info" alignment="TOP_CENTER" contentDisplay="TOP" layoutX="5.0" layoutY="81.0" prefHeight="50.0" prefWidth="144.0" textFill="#fff">
+                           <font>
+                              <Font name="Calibri" size="19.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="p2status" alignment="TOP_CENTER" contentDisplay="TOP" layoutY="134.0" prefHeight="33.0" prefWidth="144.0" textFill="#34caed">
+                           <font>
+                              <Font name="Calibri" size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Group>
+                  <Group layoutX="820.0" layoutY="17.0">
+                     <children>
+                        <ImageView fx:id="p3View" fitHeight="144.0" fitWidth="144.0" layoutX="44.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="p3chipInfo" alignment="TOP_CENTER" contentDisplay="TOP" layoutY="229.0" prefHeight="33.0" prefWidth="144.0" textFill="WHITE">
+                           <font>
+                              <Font name="Calibri" size="19.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="p3chipView" fitHeight="100.0" fitWidth="100.0" layoutX="22.0" layoutY="151.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="p3Info" alignment="TOP_CENTER" contentDisplay="TOP" layoutX="44.0" layoutY="81.0" prefHeight="50.0" prefWidth="144.0" textFill="#fff">
+                           <font>
+                              <Font name="Calibri" size="19.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="p3status" alignment="TOP_CENTER" contentDisplay="TOP" layoutX="56.0" layoutY="129.0" prefHeight="33.0" prefWidth="144.0" textFill="#34caed">
+                           <font>
+                              <Font name="Calibri" size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Group>
+                  <Group layoutX="1008.0" layoutY="253.0">
+                     <children>
+                        <ImageView fx:id="p4View" fitHeight="144.0" fitWidth="144.0" layoutX="108.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="p4Info" alignment="TOP_CENTER" contentDisplay="TOP" layoutX="108.0" layoutY="90.0" prefHeight="50.0" prefWidth="144.0" textFill="#fff">
+                           <font>
+                              <Font name="Calibri" size="19.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="p4chipView" fitHeight="100.0" fitWidth="100.0" layoutX="22.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="p4chipInfo" alignment="TOP_CENTER" contentDisplay="TOP" layoutY="147.0" prefHeight="33.0" prefWidth="144.0" textFill="WHITE">
+                           <font>
+                              <Font name="Calibri" size="19.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="p4status" alignment="TOP_CENTER" contentDisplay="TOP" layoutX="108.0" layoutY="135.0" prefHeight="33.0" prefWidth="144.0" textFill="#34caed">
+                           <font>
+                              <Font name="Calibri" size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Group>
+                  <Group layoutX="14.0" layoutY="261.0">
+                     <children>
+                        <ImageView fx:id="p1View" fitHeight="144.0" fitWidth="144.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="p1Info" alignment="TOP_CENTER" contentDisplay="TOP" layoutX="5.0" layoutY="88.0" prefHeight="50.0" prefWidth="144.0" text="⛃ 999" textFill="#fff">
+                           <font>
+                              <Font name="Calibri" size="19.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="p1chipView" fitHeight="100.0" fitWidth="100.0" layoutX="171.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="p1chipInfo" alignment="TOP_CENTER" contentDisplay="TOP" layoutX="149.0" layoutY="133.0" prefHeight="33.0" prefWidth="144.0" textFill="WHITE">
+                           <font>
+                              <Font name="Calibri" size="19.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="p1status" alignment="TOP_CENTER" contentDisplay="TOP" layoutY="144.0" prefHeight="33.0" prefWidth="144.0" textFill="#34caed">
+                           <font>
+                              <Font name="Calibri" size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Group>
+                  <Group layoutX="313.0" layoutY="386.0">
+                     <children>
+                        <ImageView fx:id="p6View" fitHeight="144.0" fitWidth="144.0" layoutX="57.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="p6Info" alignment="TOP_CENTER" contentDisplay="TOP" layoutX="57.0" layoutY="204.0" prefHeight="50.0" prefWidth="144.0" textFill="#fff">
+                           <font>
+                              <Font name="Calibri" size="19.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="p6chipView" fitHeight="100.0" fitWidth="100.0" layoutX="22.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="p6chipInfo" alignment="TOP_CENTER" contentDisplay="TOP" layoutY="84.0" prefHeight="33.0" prefWidth="144.0" textFill="WHITE">
+                           <font>
+                              <Font name="Calibri" size="19.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="p6status" alignment="TOP_CENTER" contentDisplay="TOP" layoutX="50.0" layoutY="254.0" prefHeight="33.0" prefWidth="144.0" textFill="#34caed">
+                           <font>
+                              <Font name="Calibri" size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Group>
+                  <Group layoutX="756.0" layoutY="383.0">
+                     <children>
+                        <ImageView fx:id="p5View" fitHeight="144.0" fitWidth="144.0" layoutX="64.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="p5Info" alignment="TOP_CENTER" contentDisplay="TOP" layoutX="64.0" layoutY="196.0" prefHeight="50.0" prefWidth="144.0" textFill="#fff">
+                           <font>
+                              <Font name="Calibri" size="19.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="p5chipView" fitHeight="100.0" fitWidth="100.0" layoutX="22.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="p5chipInfo" alignment="TOP_CENTER" contentDisplay="TOP" layoutY="88.0" prefHeight="33.0" prefWidth="144.0" textFill="WHITE">
+                           <font>
+                              <Font name="Calibri" size="19.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="p5status" alignment="TOP_CENTER" contentDisplay="TOP" layoutX="59.0" layoutY="240.0" prefHeight="33.0" prefWidth="144.0" textFill="#34caed">
+                           <font>
+                              <Font name="Calibri" size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Group>
+                  <Group layoutX="990.0" layoutY="589.0">
+                     <children>
+                              <Button layoutX="159.0" layoutY="71.0" mnemonicParsing="false" onMouseClicked="#actionBet" onMouseEntered="#squadMouseEntered" onMouseExited="#squadMouseExited" onMousePressed="#squadMousePressed" prefHeight="32.0" prefWidth="128.0" style="-fx-background-color: #01070e; -fx-text-fill: #acc3c5; -fx-border-color: #3b5d62; -fx-border-width: 3px;" text="Bet">
+                                  <font>
+                                      <Font name="Calibri" size="20.0" />
+                                  </font>
+                              </Button>
+                              <Button layoutX="27.0" layoutY="71.0" mnemonicParsing="false" onMouseClicked="#actionFold" onMouseEntered="#squadMouseEntered" onMouseExited="#squadMouseExited" onMousePressed="#squadMousePressed" prefHeight="32.0" prefWidth="128.0" style="-fx-background-color: #01070e; -fx-text-fill: #acc3c5; -fx-border-color: #3b5d62; -fx-border-width: 3px;" text="Fold">
+                                  <font>
+                                      <Font name="Calibri" size="20.0" />
+                                  </font>
+                              </Button>
+                              <Button fx:id="btnCheck" layoutX="26.0" layoutY="22.0" mnemonicParsing="false" onMouseClicked="#actionCheck" onMouseEntered="#squadMouseEntered" onMouseExited="#squadMouseExited" onMousePressed="#squadMousePressed" prefHeight="32.0" prefWidth="128.0" style="-fx-background-color: #01070e; -fx-text-fill: #acc3c5; -fx-border-color: #3b5d62; -fx-border-width: 3px;" text="Check">
+                                  <font>
+                                      <Font name="Calibri" size="20.0" />
+                                  </font>
+                              </Button>
+                              <Button layoutX="159.0" layoutY="22.0" mnemonicParsing="false" onMouseClicked="#actionRaise" onMouseEntered="#squadMouseEntered" onMouseExited="#squadMouseExited" onMousePressed="#squadMousePressed" prefHeight="32.0" prefWidth="128.0" style="-fx-background-color: #01070e; -fx-text-fill: #acc3c5; -fx-border-color: #3b5d62; -fx-border-width: 3px;" text="Raise">
+                                  <font>
+                                      <Font name="Calibri" size="20.0" />
+                                  </font>
+                              </Button>
+                     </children>
+                  </Group>
+                  <Group layoutX="24.0" layoutY="19.0">
+                     <children>
+                        <Label fx:id="playersAmount" prefHeight="41.0" prefWidth="277.0" style="-fx-text-fill: #fff;" text="Игроков: 0 / 6">
+                           <font>
+                              <Font name="Calibri Light" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="commonBank" layoutY="40.0" prefHeight="41.0" prefWidth="277.0" style="-fx-text-fill: #fff;" text="Общий банк: 0">
+                           <font>
+                              <Font name="Calibri Light" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="gameStep" layoutX="1.0" layoutY="87.0" prefHeight="41.0" prefWidth="277.0" style="-fx-text-fill: #fff;" text="Этап: ...">
+                           <font>
+                              <Font name="Calibri Light" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="gameRound" layoutX="1.0" layoutY="128.0" prefHeight="41.0" prefWidth="277.0" style="-fx-text-fill: #fff;" text="Раунд: ...">
+                           <font>
+                              <Font name="Calibri Light" size="22.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Group>
+                  <Group layoutX="439.0" layoutY="277.0">
+                     <children>
+                        <ImageView fx:id="com1view" fitHeight="135.0" fitWidth="85.0" layoutX="-8.0" layoutY="9.0" opacity="0.41" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="com1info" alignment="TOP_CENTER" contentDisplay="TOP" layoutX="-9.0" layoutY="6.0" prefHeight="133.0" prefWidth="86.0" textFill="#00f3ff">
+                           <font>
+                              <Font name="Calibri" size="110.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="com2view" fitHeight="135.0" fitWidth="85.0" layoutX="75.0" layoutY="9.0" opacity="0.41" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="com3view" fitHeight="135.0" fitWidth="85.0" layoutX="160.0" layoutY="9.0" opacity="0.41" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="com4view" fitHeight="135.0" fitWidth="85.0" layoutX="244.0" layoutY="9.0" opacity="0.41" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="com5view" fitHeight="135.0" fitWidth="85.0" layoutX="330.0" layoutY="9.0" opacity="0.41" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="com2info" alignment="TOP_CENTER" contentDisplay="TOP" layoutX="73.0" layoutY="6.0" prefHeight="133.0" prefWidth="86.0" textFill="#00f3ff">
+                           <font>
+                              <Font name="Calibri" size="110.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="com3info" alignment="TOP_CENTER" contentDisplay="TOP" layoutX="159.0" layoutY="6.0" prefHeight="133.0" prefWidth="86.0" textFill="#00f3ff">
+                           <font>
+                              <Font name="Calibri" size="110.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="com4info" alignment="TOP_CENTER" contentDisplay="TOP" layoutX="242.0" layoutY="5.0" prefHeight="133.0" prefWidth="86.0" textFill="#00f3ff">
+                           <font>
+                              <Font name="Calibri" size="110.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="com5info" alignment="TOP_CENTER" contentDisplay="TOP" layoutX="328.0" layoutY="4.0" prefHeight="133.0" prefWidth="86.0" textFill="#00f3ff">
+                           <font>
+                              <Font name="Calibri" size="110.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Group>
+                  <Group layoutX="9.0" layoutY="555.0">
+                     <children>
+                        <Label fx:id="myCard2" alignment="CENTER" contentDisplay="BOTTOM" layoutX="84.0" layoutY="18.0" opacity="0.53" prefHeight="19.0" prefWidth="10.0" style="-fx-background-color: white;" textAlignment="CENTER" textFill="#434343" textOverrun="LEADING_WORD_ELLIPSIS">
+                           <font>
+                              <Font size="120.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="myCard1" alignment="CENTER" contentDisplay="BOTTOM" layoutX="5.0" layoutY="18.0" opacity="0.53" prefHeight="19.0" prefWidth="10.0" style="-fx-background-color: white;" textAlignment="CENTER" textFill="#434343" textOverrun="LEADING_WORD_ELLIPSIS">
+                           <font>
+                              <Font size="120.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="5.0" layoutY="7.0" opacity="0.98" prefHeight="41.0" prefWidth="157.0" style="-fx-background-color: #12552c;" />
+                     </children>
+                  </Group>
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</StackPane>
