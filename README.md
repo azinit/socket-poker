@@ -5,11 +5,9 @@ Multiplayer card game
 
 ## Demo
 
-<figure class="video_container">
-  <video controls="true" allowfullscreen="true" poster="demo/screenshots/main_menu_0.png">
-    <source src="demo/demoreel.mp4" type="video/mp4">
-  </video>
-</figure>
+### Demoreel
+
+[link](demo/demoreel.mp4)
 
 ### Intro
 
